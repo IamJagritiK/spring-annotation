@@ -17,8 +17,8 @@ public class config {
     @Bean
     public Actor getActor()
     {
-        return new Actor();
+        return new Actor("rob","male",38);
     }
-
+  
 
 }

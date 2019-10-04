@@ -5,15 +5,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Movie {
+
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
     @Autowired
-    Actor actor;
-    public void setActor(Actor actor)
-    {
-        this.actor=actor;
+
+     Actor actor;
+
+    public Movie() {
+
     }
-    public Actor getActor() {
-        return actor;
-    }
+
+
     public void print()
     {
         actor.prints();

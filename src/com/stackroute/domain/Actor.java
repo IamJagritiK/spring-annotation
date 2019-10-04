@@ -1,9 +1,29 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Actor {
+
+    @Value("rob")
+    private String name;
+    @Value("male")
+    private String gender;
+    @Value("38")
+    private int age;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
@@ -16,22 +36,8 @@ public class Actor {
         return age;
     }
 
-    private String name;
-    private String gender;
-    private int age;
 
-    public void setname(String name)
-    {
-        this.name=name;
-    }
-    public void setgender(String gender)
-    {
-        this.gender=gender;
-    }
-    public void setage(int age)
-    {
-        this.age=age;
-    }
+
     public void prints()
     {
         System.out.println("name"+" "+name+" "+"gender"+" "+gender+" "+"age"+" "+age);

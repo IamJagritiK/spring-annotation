@@ -13,19 +13,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Hello world!
  *
  */
-public class Main 
+public class Main
 {
     public static void main( String[] args )
     {
         ApplicationContext context=new AnnotationConfigApplicationContext(config.class);
-        BeanLifecycleDemoBean lc=context.getBean(BeanLifecycleDemoBean.class);
+      //  BeanLifecycleDemoBean lc=context.getBean(BeanLifecycleDemoBean.class);
 
         Movie movie=context.getBean(Movie.class);
         // movie.print();
 
-        ((ConfigurableApplicationContext)context).close();
+       // ((ConfigurableApplicationContext)context).close();
 
        // System.out.println( "Hello World!" );
-        
     }
 }
